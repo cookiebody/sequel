@@ -9,6 +9,11 @@
 # unexpired.  Example of use:
 #
 #   DB.extension(:connection_expiration)
+#   
+#   # Set the number of seconds that need to pass since
+#   # connection creation before expiring a connection.
+#   # Defaults to 14400 seconds (4 hours).
+#   DB.pool.connection_expiration_timeout = 10
 #
 # Note that this extension only affects the default threaded
 # and the sharded threaded connection pool.  The single
